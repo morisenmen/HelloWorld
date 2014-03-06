@@ -1,0 +1,14 @@
+# Gradle temporary files
+.gradle/
+target/
+.gradletasknamecache
+
+# IDE
+*.iml
+*.ipr
+*.iws
+.project
+.classpath
+.settings/
+classes/
+.idea/
