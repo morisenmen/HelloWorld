@@ -1,0 +1,40 @@
+﻿doctype 5
+html(lang="en")
+    head
+        title= title
+        meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+        link(rel='stylesheet', href='/stylesheets/bootstrap.css', type='text/css')
+        link(href="stylesheets/bootstrap-responsive.css", type='text/cs', rel="stylesheet")
+    body
+        div.navbar.navbar-fixed-top
+            div.navbar-inner
+                if success
+                    div.alert.alert-success= success
+                if error
+                    div.alert.alert-error= error
+                div.container
+                    a.btn.btn-navbar(data-toggle="collapse", data-target=".nav-collapse")
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
+                    a.brand(href="/") Microblog
+                    div.nav-collapse
+                        ul.nav
+                            li.active
+                                a(href="/") 主页
+                                if !user
+                                    li
+                                        a(href="/login") 登录
+                                    li
+                                        a(href="/reg") 注册
+                                else
+                                    li
+                                        span= user.name
+                                        a(href="logout") 退出
+                        div#container.container
+                            block content
+            footer
+                p
+                    a(href="http://www.baidu.com", target="_blank") baidu.com 2012
+                script(src="/javascripts/jquery.js")
+                script(src="/javascripts/bootstrap.js")
