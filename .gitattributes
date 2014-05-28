@@ -1,0 +1,20 @@
+﻿* text=auto
+
+*.java text
+*.xml text
+*.properties text
+*.gradle text
+*.groovy text
+*.clj text
+*.erl text
+*.lua text
+*.js text
+*.json text
+*.yaml text
+*.md text
+*.css text
+*.ejs text
+*.py text
+
+*.bat text eol=crlf
+*.sh text eol=lf
